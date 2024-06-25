@@ -1,0 +1,21 @@
+{
+    "name": "Shareflix",
+    "description": "Watch Netflix with your friends!",
+    "version": "0.0.2",
+    "manifest_version": 2,
+    "permissions": ["tabs", "declarativeContent", "activeTab", "webNavigation", "https://*/", "http://*/"],
+    "icons": {
+        "16": "assets/images/icon.png",
+        "48": "assets/images/icon.png",
+        "128": "assets/images/icon.png"
+    },
+    "background": {
+        "scripts": ["ldn.bundle.js"],
+        "persistent": true
+    },
+    "page_action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/images/icon.png"
+    },
+    "web_accessible_resources": ["controller.bundle.js"]
+}

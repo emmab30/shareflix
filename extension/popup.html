@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="styles/styles.css" />
+        <script src="scripts/jquery.min.js"></script>
+        <script src="popup.bundle.js"></script>
+        <meta http-equiv="Content-Security-Policy" content="default-src https: wss: 'unsafe-inline' 'unsafe-eval'; connect-src 'self' wss://127.0.0.1:8845 http://127.0.0.1:8845" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet" />
+    </head>
+
+    <body>
+        <button id="toggle-shareflix" class="button-19 disabled" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 5px">
+            <img src="/assets/images/icon.png" alt="Icon" style="object-fit: contain; width: 40px; height: 40px" />
+            <div style="display: flex; flex-direction: column; gap: 2px; justify-content: center; align-items: center">
+                <span class="extension-enabled-status">Click to change</span>
+                <p class="extension-enabled-subtitle" style="margin: 0; color: #222; font-size: 11px">Shareflix is now disabled</p>
+            </div>
+        </button>
+
+        <div id="container-enabled">
+            <div style="width: 100%; height: 1px; background: rgba(255, 255, 255, 0.1); margin: 20px auto 10px auto"></div>
+
+            <p style="margin: 0; color: rgba(255, 255, 255, 0.9); font-weight: 200">This is the username you will use to watch movies with your friends.</p>
+            <div id="input-username">
+                <input
+                    type="text"
+                    id="username"
+                    placeholder="Enter your username"
+                    style="
+                        font-family: 'Source Sans 3', sans-serif;
+                        font-weight: 200;
+                        width: 100%;
+                        padding: 10px;
+                        margin-top: 10px;
+                        border: 1px solid rgba(255, 255, 255, 0.1);
+                        border-radius: 5px;
+                        font-size: 14px;
+                        color: #fff;
+                        background-color: #222;
+                        outline: none;
+                    "
+                />
+            </div>
+
+            <button id="disconnect-shareflix" class="button-19" style="display: flex; flex-direction: row; align-items: center; justify-content: center; gap: 5px">
+                <div style="display: flex; flex-direction: column; gap: 2px; justify-content: center; align-items: center">
+                    <span class="extension-enabled-status">Disconnect from session</span>
+                </div>
+            </button>
+        </div>
+    </body>
+</html>
